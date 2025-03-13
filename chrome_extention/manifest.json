@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "Twitter Kasu Detector",
+	"version": "1.0",
+	"description": "ツイートのカス度を判定し、カス認定ならラベル表示や非表示処理を行う拡張機能。",
+	"permissions": [
+		"storage"
+	],
+	"host_permissions": [
+		"http://localhost:5000/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://twitter.com/*",
+				"*://x.com/*"
+			],
+			"js": [
+				"contentScript.js"
+			]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"options_page": "options.html",
+	"action": {
+		"default_popup": "popup.html"
+	}
+}

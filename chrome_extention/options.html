@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Twitter Kasu Detector 設定</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding: 20px;
+			max-width: 600px;
+			margin: 0 auto;
+			line-height: 1.5;
+		}
+
+		h1 {
+			color: #1DA1F2;
+			margin-bottom: 20px;
+		}
+
+		.option-box {
+			background-color: #f5f8fa;
+			border-radius: 10px;
+			padding: 15px;
+			margin-bottom: 15px;
+			border: 1px solid #e1e8ed;
+		}
+
+		label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 10px;
+			width: 18px;
+			height: 18px;
+		}
+
+		#status {
+			margin-top: 20px;
+			padding: 10px;
+			background-color: #e8f5e9;
+			border-radius: 5px;
+			display: none;
+		}
+
+		button {
+			background-color: #1DA1F2;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		button:hover {
+			background-color: #1a91da;
+		}
+
+		.info {
+			font-size: 0.9em;
+			color: #657786;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Twitter Kasu Detector 設定</h1>
+
+	<div class="option-box">
+		<label>
+			<input type="checkbox" id="hideTweets">
+			<span>カス認定されたツイートを非表示にする</span>
+		</label>
+		<p class="info">チェックをオンにすると、カス度が閾値（50）以上のツイートは完全に非表示になります。オフの場合は、赤いラベルのみ表示されます。</p>
+	</div>
+
+	<button id="save">設定を保存</button>
+
+	<div id="status">設定が保存されました</div>
+
+	<script src="options.js"></script>
+</body>
+
+</html>
