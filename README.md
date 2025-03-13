@@ -1,5 +1,8 @@
-# Twitter Kasu Detector
+# GuardScope
 
+## openAI API keyを自身で設定してください
+
+## 不適切度の推定の精度の上昇が本プロジェクトの本質でもあるので、現状不十分であることはご了承ください
 ```
 python3 server.py
 ```
